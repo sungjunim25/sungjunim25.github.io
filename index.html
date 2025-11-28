@@ -2,14 +2,190 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>포트폴리오 테스트</title>
+  <title>임성준 포트폴리오</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body {
+      margin: 0; padding: 0;
+      font-family: 'Noto Sans KR', Arial, sans-serif;
+      background: #f5f5ff;
+      color: #222;
+    }
+    .navbar {
+      position: fixed;
+      top: 0; left: 0; width: 100%;
+      background: #fff; box-shadow: 0 2px 8px #e7eaf8;
+      height: 60px; display: flex; align-items: center;
+      z-index: 999;
+    }
+    .nav-menu {
+      width: 100%; display: flex; justify-content: center;
+      gap: 22px; margin: 0; padding: 0;
+    }
+    .nav-menu a {
+      display:inline-block; color: #5a48b7;
+      text-decoration: none; font-weight: 700;
+      font-size: 1.07em; letter-spacing:0.02em;
+      padding: 16px 5px 12px 5px; border-radius: 10px 10px 0 0;
+      margin:0 4px; transition: background 0.2s, color 0.15s;
+    }
+    .nav-menu a:hover, .nav-menu a.active {
+      background: #eeeafd; color: #c62458;
+    }
+    .container {
+      max-width: 850px;
+      margin: 76px auto 0 auto;
+      padding: 32px 24px 40px 24px;
+      background: #fff; border-radius: 18px;
+      box-shadow: 0 2px 30px #e2e8f0;
+    }
+    section {
+      margin-bottom: 48px;
+      scroll-margin-top: 78px;
+    }
+    h2 {
+      color: #5a48b7; margin-top:0;
+      font-size:2em; border-bottom: 1.5px solid #ebe8ff; padding-bottom:10px;
+    }
+    h1 {
+      margin-top:0; font-size:2.3em; text-align:center;
+      color: #ba278b; padding:8px 0 12px 0;
+      font-weight:900;
+    }
+    .subtitle { color:#2a4269; font-size: 1em; margin-bottom: 18px; display: block; }
+    .profile-img {
+      display:block; margin: 24px auto 8px auto;
+      max-width:160px; border-radius:50%; box-shadow: 0 2px 16px #ddd;
+    }
+    .data-list { margin: 18px 0 12px 0;}
+    .data-list li{margin-bottom:8px;font-size:1.06em;}
+    .go-btn {
+      display:inline-block; padding:10px 24px;
+      background: #f8eaff; color: #ba278b; font-weight: 700;
+      border:none; border-radius: 24px; box-shadow: 0 2px 12px #e5e7eb;
+      font-size:1em; text-decoration:none; margin:30px auto; cursor:pointer;
+      transition: background 0.2s;
+    }
+    .go-btn:hover { background: #eed6f7; }
+    @media (max-width:930px){
+      .container{margin:108px 8px 0 8px; padding:18px 4px 30px 4px;}
+      h1{font-size:2em;}
+    }
+  </style>
 </head>
 <body>
-  <h1>테스트: 이 글자가 보이면 기본 세팅 OK!</h1>
-  <a href="#global">Global 섹션으로 이동</a>
-  <section id="global">
-    <h2>Global Section</h2>
-    <p>여기는 글로벌입니다. 정상적으로 보이면 OK!</p>
+<nav class="navbar">
+  <div class="nav-menu">
+    <a href="#home" class="active">홈</a>
+    <a href="#activity">활동</a>
+    <a href="#language">어학자격증</a>
+    <a href="#scholarship">장학금</a>
+    <a href="#subject">교과</a>
+    <a href="#program">프로그램</a>
+    <a href="#edisc">성향(e-DISC)</a>
+    <a href="#story">스토리</a>
+    <a href="#badges">디지털배지3품</a>
+    <a href="#goal">목표</a>
+    <a href="#global" style="color:#ba278b;">Global</a>
+  </div>
+</nav>
+<div class="container">
+  <section id="home">
+    <h1>임성준 포트폴리오</h1>
+    <img src="https://source.unsplash.com/160x160/?portrait,student" alt="프로필" class="profile-img">
+    <span class="subtitle">성균관대학교 소프트웨어학과 / 대한민국 수원</span>
+    <p>
+      반갑습니다! <br>
+      도전·성장·협동을 소중히 여기는 임성준입니다.<br>
+      <b>#도전 #성장 #긍정 #함께</b>
+    </p>
+    <a class="go-btn" href="#activity">주요 활동 바로가기</a>
   </section>
+  <section id="activity">
+    <h2>활동</h2>
+    <ul class="data-list">
+      <li><b>동아리</b>: 코딩, 봉사, 취업 세미나</li>
+      <li><b>대외활동</b>: 삼성 SDS 연수생, 대학생 리더스 캠프</li>
+      <li><b>자격증</b>: 컴퓨터 활용능력 1급</li>
+      <li><b>공모전</b>: 전국 IT 아이디어 경진대회 <span style="color:#ba278b;">(우수상)</span></li>
+    </ul>
+  </section>
+  <section id="language">
+    <h2>어학자격증</h2>
+    <ul class="data-list">
+      <li><b>TOEIC</b>: 875점 (2025.10)</li>
+      <li><b>JLPT N2</b>: 합격</li>
+      <li><b>OPIc</b>: IH(Intermediate High)</li>
+      <li><b>HSK 4급</b>: 합격</li>
+    </ul>
+  </section>
+  <section id="scholarship">
+    <h2>장학금</h2>
+    <ul class="data-list">
+      <li>2024 성적우수 장학금</li>
+      <li>2023 소프트웨어 인재 장학금</li>
+      <li>대외활동 기여 장학금</li>
+    </ul>
+  </section>
+  <section id="subject">
+    <h2>교과</h2>
+    <ul class="data-list">
+      <li><b>전공</b>: 알고리즘, 데이터베이스, 인공지능, 운영체제</li>
+      <li><b>성적(학점)</b>: 4.37 / 4.5</li>
+      <li><b>교양</b>: 소통과 협력, 비판적 사고</li>
+    </ul>
+  </section>
+  <section id="program">
+    <h2>프로그램</h2>
+    <ul class="data-list">
+      <li>SKKU 프로그래밍 캠프 수료</li>
+      <li>AI 프로젝트 집중과정</li>
+      <li>해외 학생교류 프로그램 참가</li>
+    </ul>
+  </section>
+  <section id="edisc">
+    <h2>성향(e-DISC)</h2>
+    <ul class="data-list">
+      <li><b>e-DISC 결과</b>: D(주도)형, I(사교)형</li>
+      <li>팀 프로젝트 리더 경험 다수</li>
+    </ul>
+  </section>
+  <section id="story">
+    <h2>스토리</h2>
+    <p>
+      어릴 때부터 컴퓨터와 친하게 지내며<br>
+      대학생이 되어 코딩에 본격적으로 빠졌습니다.<br>
+      여러 실패와 도전을 경험하며 성장할 수 있었고,<br>
+      앞으로도 끊임 없는 자기계발로 더 나은 사람이 되고 싶습니다!<br>
+      <b>#도전 #성장 #긍정</b>
+    </p>
+  </section>
+  <section id="badges">
+    <h2>디지털배지3품</h2>
+    <ul class="data-list">
+      <li>AI Leader 디지털배지</li>
+      <li>서포터즈 활동 배지</li>
+      <li>커뮤니티 모더레이터 배지</li>
+    </ul>
+  </section>
+  <section id="goal">
+    <h2>목표</h2>
+    <ul class="data-list">
+      <li>글로벌 IT 인재로 성장</li>
+      <li>영어·일본어 고득점 달성</li>
+      <li>AI 프로젝트 논문 발표</li>
+      <li>사회에 기여하는 개발자 되기</li>
+    </ul>
+  </section>
+  <section id="global">
+    <h2 style="color:#c62458;">Global Section</h2>
+    <p>
+      해외 교류, 글로벌 프로젝트, 국제 네트워킹 등<br>
+      세계 속의 나를 만들 수 있는 도전과 성장의 기록을 남기세요.<br>
+      <b>#글로벌 #도전 #세계와-함께</b>
+    </p>
+    <a class="go-btn" href="#home">맨 위로 돌아가기</a>
+  </section>
+</div>
 </body>
 </html>
