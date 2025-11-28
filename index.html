@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>임성준 포트폴리오</title>
+  <title>Portfolio</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
     body {
@@ -10,235 +10,134 @@
       font-family: 'Noto Sans KR', Arial, sans-serif;
       background: #f5f5ff; color: #222;
     }
-    .navbar {
-      position: fixed; top: 0; left: 0; width: 100%;
-      background: #fff; box-shadow: 0 2px 8px #e7eaf8;
-      height: 60px; display: flex; align-items: center;
-      z-index: 999;
+    .hero-wrapper {
+      max-width: 900px;
+      margin: 92px auto 44px auto;
+      padding: 42px 22px;
+      background: #fff;
+      border-radius: 24px;
+      box-shadow: 0 3px 36px #e3e7fb;
+      display: flex;
+      gap: 38px;
+      align-items: center;
     }
-    .nav-menu {
-      width: 100%; display: flex; justify-content: center;
-      gap: 22px; margin: 0; padding: 0;
+    .info-left {
+      flex: 1.2;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
     }
-    .nav-menu a {
-      display:inline-block; color: #5a48b7;
-      text-decoration: none; font-weight: 700;
-      font-size: 1.07em; letter-spacing:0.02em;
-      padding: 16px 5px 12px 5px; border-radius: 10px 10px 0 0;
-      margin:0 4px; transition: background 0.2s, color 0.15s;
+    .name-kr { font-size: 2em; font-weight: 800; margin-bottom: 4px; }
+    .name-en { font-size: 1.13em; font-weight: 500; letter-spacing:0.09em; color: #6f7ae1;margin-bottom:12px;}
+    .item-lines {  font-size: 1em; line-height:1.7em; color: #333; margin-bottom: 16px; }
+    .badge-row {
+      display: flex; gap: 16px; margin-top: 12px; margin-bottom: 8px;
     }
-    .nav-menu a:hover, .nav-menu a.active {
-      background: #eeeafd; color: #c62458;
+    .badge {
+      width:70px; height:70px; display: flex;
+      flex-direction:column; align-items: center;
+      justify-content: center;
+      background: #aee9fa; border-radius:50%; box-shadow: 0 1px 8px #bce8ff;
+      color: #fff; font-weight: 700; font-size: 1.13em; position:relative;
+      border: 3px solid #e9f6fc;
+      text-align:center;
     }
-    .container {
-      max-width: 850px;
-      margin: 76px auto 0 auto;
-      padding: 32px 24px 40px 24px;
-      background: #fff; border-radius: 18px;
-      box-shadow: 0 2px 30px #e2e8f0;
+    .badge small {
+      font-size: 0.86em;
+      display: block;
+      margin-top: 2px;
+      color: #fff;
+      font-weight: 400;
+      line-height: 1em;
     }
-    section {
-      margin-bottom: 48px;
-      scroll-margin-top: 78px;
+    .small-box-row {
+      display: flex; gap: 14px; margin-bottom:5px; flex-wrap: wrap;
     }
-    h2 {
-      color: #5a48b7; margin-top:0;
-      font-size:2em; border-bottom: 1.5px solid #ebe8ff; padding-bottom:10px;
+    .small-box {
+      background: #fff;
+      border: 1.5px solid #e3e6eb;
+      border-radius: 11px;
+      padding: 7px 14px;
+      font-size: 1em;
+      font-weight: 600;
+      color: #298c8c;
+      box-shadow: 0 1px 12px #eefcff;
+      margin-bottom: 3px;
+      white-space: nowrap;
     }
-    h1 {
-      margin-top:0; font-size:2.3em; text-align:center;
-      color: #ba278b; padding:8px 0 12px 0;
-      font-weight:900;
+    .contact-box-row { margin-top:6px; display:flex; gap:10px; flex-wrap:wrap;}
+    .contact-box {
+      background: #fff;
+      padding: 7px 12px;
+      border-radius: 10px;
+      font-size: 0.97em;
+      color: #2c2c44;
+      border: 1.3px solid #e2e4ee;
+      font-weight: 500;
+      box-shadow: 0 1px 8px #e6e8ef;
+      margin-bottom:3px;
+      display: flex;
+      align-items: center;
+      gap:7px;
     }
-    .subtitle { color:#2a4269; font-size: 1em; margin-bottom: 18px; display: block; }
+    .contact-box a {
+      color: #2c2c44; text-decoration: none;
+      font-size: 1em; font-weight: 500;
+    }
+    .profile-right {
+      flex: 1;
+      display: flex; flex-direction: column; align-items: center;
+    }
     .profile-img {
-      display:block; margin: 24px auto 8px auto;
-      max-width:160px; border-radius:50%; box-shadow: 0 2px 16px #ddd;
+      width:165px; height:165px;
+      border-radius: 50%; object-fit: cover;
+      box-shadow: 0 2px 16px #dde1f8;
+      border: 3px solid #cbeafe;
+      background: #bfe2fa;
     }
-    .data-list { margin: 18px 0 12px 0;}
-    .data-list li{margin-bottom:8px;font-size:1.06em;}
-    .go-btn {
-      display:inline-block;
-      padding:10px 24px;
-      background: #f8eaff; color: #ba278b; font-weight: 700;
-      border:none; border-radius: 24px; box-shadow: 0 2px 12px #e5e7eb;
-      font-size:1em; text-decoration:none; margin:30px auto; cursor:pointer;
-      transition: background 0.2s;
-    }
-    .go-btn:hover { background: #eed6f7; }
-    .hidden { display: none !important; }
-    .show-btn {
-      display: inline-block;
-      margin: 12px 0;
-      background: #d252bc; color: #fff !important; font-size:0.97em;
-      border:none; border-radius:18px; padding:9px 18px;
-      cursor:pointer; transition:background 0.2s;
-    }
-    .show-btn:hover { background: #8a2ab2; }
-    .grade-table {
-      width:100%; border-collapse:collapse;
-      margin-top:18px; margin-bottom: 18px;
-    }
-    .grade-table th, .grade-table td {
-      border: 1px solid #ddd;
-      padding: 8px 10px; text-align: left;
-    }
-    .grade-table th { background: #f8eaff; color: #5a48b7;}
-    .grade-table caption {
-      caption-side: top; text-align: left; padding: 5px;
-      font-weight: 600; color: #ba278b;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.85em;
-      color: #aaa;
-      margin: 70px 0 15px 0;
-      padding-bottom: 8px;
-    }
-    @media (max-width:930px){
-      .container{margin:108px 8px 0 8px; padding:18px 4px 30px 4px;}
-      h1{font-size:2em;}
-      .grade-table, .grade-table th, .grade-table td {font-size:0.98em;}
+    @media (max-width:900px) {
+      .hero-wrapper {
+        flex-direction: column;
+        padding: 24px 10px;
+        gap:24px;
+      }
+      .profile-img { width:120px;height:120px;}
     }
   </style>
 </head>
 <body>
-<nav class="navbar">
-  <div class="nav-menu">
-    <a href="#home" class="active">홈</a>
-    <a href="#activity">활동</a>
-    <a href="#language">어학자격증</a>
-    <a href="#scholarship">장학금</a>
-    <a href="#subject">교과</a>
-    <a href="#program">프로그램</a>
-    <a href="#edisc">성향(e-DISC)</a>
-    <a href="#story">스토리</a>
-    <a href="#badges">디지털배지3품</a>
-    <a href="#goal">목표</a>
-    <a href="#global" style="color:#ba278b;">Global</a>
-  </div>
-</nav>
-<div class="container">
-  <section id="home">
-    <h1>임성준 포트폴리오</h1>
-    <img src="https://source.unsplash.com/160x160/?portrait,student" alt="프로필" class="profile-img">
-    <span class="subtitle">성균관대학교 소프트웨어학과 / 대한민국 수원</span>
-    <p>
-      반갑습니다! <br>
-      도전·성장·협동을 소중히 여기는 임성준입니다.<br>
-      <b>#도전 #성장 #긍정 #함께</b>
-    </p>
-    <a class="go-btn" href="#activity">주요 활동 바로가기</a>
-  </section>
-  <section id="activity">
-    <h2>활동</h2>
-    <ul class="data-list">
-      <li><b>동아리</b>: 코딩, 봉사, 취업 세미나</li>
-      <li><b>대외활동</b>: 삼성 SDS 연수생, 대학생 리더스 캠프</li>
-      <li><b>자격증</b>: 컴퓨터 활용능력 1급</li>
-      <li><b>공모전</b>: 전국 IT 아이디어 경진대회 <span style="color:#ba278b;">(우수상)</span></li>
-    </ul>
-  </section>
-  <section id="language">
-    <h2>어학자격증</h2>
-    <ul class="data-list">
-      <li><b>TOEIC</b>: 875점 (2025.10)</li>
-      <li><b>JLPT N2</b>: 합격</li>
-      <li><b>OPIc</b>: IH(Intermediate High)</li>
-      <li><b>HSK 4급</b>: 합격</li>
-    </ul>
-  </section>
-  <section id="scholarship">
-    <h2>장학금</h2>
-    <ul class="data-list">
-      <li>2024 성적우수 장학금</li>
-      <li>2023 소프트웨어 인재 장학금</li>
-      <li>대외활동 기여 장학금</li>
-    </ul>
-  </section>
-  <section id="subject">
-    <h2>교과</h2>
-    <table class="grade-table">
-      <caption>2025년 1학기 (수강 완료)</caption>
-      <tr>
-        <th>과목명</th><th>학점</th><th>성적</th>
-      </tr>
-      <tr><td>알고리즘</td><td>3</td><td>A+</td></tr>
-      <tr><td>운영체제</td><td>3</td><td>A</td></tr>
-      <tr><td>데이터베이스</td><td>3</td><td>A+</td></tr>
-      <tr><td>영어회화</td><td>2</td><td>B+</td></tr>
-    </table>
-    <table class="grade-table">
-      <caption>2025년 2학기 (수강 중)</caption>
-      <tr>
-        <th>과목명</th><th>학점</th><th>수강상태</th>
-      </tr>
-      <tr><td>인공지능</td><td>3</td><td>진행중</td></tr>
-      <tr><td>웹프로그래밍</td><td>3</td><td>진행중</td></tr>
-      <tr><td>통계학개론</td><td>2</td><td>진행중</td></tr>
-    </table>
-    <div style="margin-top:14px;color:#6c47ae;">
-      <b>전체 학점:</b> 4.37 / 4.5
+  <div class="hero-wrapper">
+    <div class="info-left">
+      <div class="name-kr">임성준</div>
+      <div class="name-en">IM SUNGJUN</div>
+      <div class="item-lines">
+        🎓 2025 · 성균관대학교 자연과학계열 입학<br>
+        🎓 2026~ · 성균관대학교 화학과 (예정)
+      </div>
+      <div class="badge-row">
+        <div class="badge">
+          99.4 <small>GPA</small>
+        </div>
+        <div class="badge">
+          50 <small>이수학점</small>
+        </div>
+      </div>
+      <div class="small-box-row">
+        <div class="small-box">화학</div>
+        <div class="small-box">수학</div>
+        <div class="small-box">물리학</div>
+      </div>
+      <div class="contact-box-row">
+        <div class="contact-box">sungjunim@g.skku.edu</div>
+        <div class="contact-box">@_sungjunim</div>
+        <div class="contact-box">
+          <a href="https://linkedin.com/in/sungjunim" target="_blank">LinkedIn</a>
+        </div>
+      </div>
     </div>
-  </section>
-  <section id="program">
-    <h2>프로그램</h2>
-    <ul class="data-list">
-      <li>SKKU 프로그래밍 캠프 수료</li>
-      <li>AI 프로젝트 집중과정</li>
-      <li>해외 학생교류 프로그램 참가</li>
-    </ul>
-  </section>
-  <section id="edisc">
-    <h2>성향(e-DISC)</h2>
-    <ul class="data-list">
-      <li><b>e-DISC 결과</b>: D(주도)형, I(사교)형</li>
-      <li>팀 프로젝트 리더 경험 다수</li>
-    </ul>
-  </section>
-  <section id="story">
-    <h2>스토리</h2>
-    <p>
-      어릴 때부터 컴퓨터와 친하게 지내며<br>
-      대학생이 되어 코딩에 본격적으로 빠졌습니다.<br>
-      여러 실패와 도전을 경험하며 성장할 수 있었고,<br>
-      앞으로도 끊임 없는 자기계발로 더 나은 사람이 되고 싶습니다!<br>
-      <b>#도전 #성장 #긍정</b>
-    </p>
-  </section>
-  <section id="badges">
-    <h2>디지털배지3품</h2>
-    <ul class="data-list">
-      <li>AI Leader 디지털배지</li>
-      <li>서포터즈 활동 배지</li>
-      <li>커뮤니티 모더레이터 배지</li>
-    </ul>
-  </section>
-  <section id="goal">
-    <h2>목표</h2>
-    <ul class="data-list">
-      <li>글로벌 IT 인재로 성장</li>
-      <li>영어·일본어 고득점 달성</li>
-      <li>AI 프로젝트 논문 발표</li>
-      <li>사회에 기여하는 개발자 되기</li>
-    </ul>
-  </section>
-  <!-- 글로벌 섹션: 기본은 숨김, 버튼 클릭 시 보임 -->
-  <section id="global" class="hidden">
-    <h2 style="color:#c62458;">Global Section</h2>
-    <p>
-      해외 교류, 글로벌 프로젝트, 국제 네트워킹 등<br>
-      세계 속의 나를 만들 수 있는 도전과 성장의 기록을 남기세요.<br>
-      <b>#글로벌 #도전 #세계와-함께</b>
-    </p>
-    <a class="go-btn" href="#home">맨 위로 돌아가기</a>
-  </section>
-  <button class="show-btn" onclick="document.getElementById('global').classList.toggle('hidden')">
-    글로벌 섹션 보기/숨기기
-  </button>
-</div>
-<footer>
-  © 2025 Sungjun Im
-</footer>
+    <div class="profile-right">
+      <img class="profile-img" src="https://source.unsplash.com/300x300/?profile,student,man" alt="내 프로필 사진">
+    </div>
+  </div>
 </body>
 </html>
